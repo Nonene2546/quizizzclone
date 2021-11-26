@@ -63,8 +63,11 @@ var currentQuestion = 0;
 // document.querySelectorAll('.choice').addEventListener('click', choiceClick);
 
 function choiceClick () {
-    $('.choice[correct]').css('background-color', 'green');
+    let crt = questionList[currentQuestion].correct
+    console.log(crt)
+    // $('.choice[correct]').css('background-color', 'green');
     $(this).parent().children(':not([correct])').css('opacity',0)
+    $('.choice' + crt).css({'background-color': 'green', 'opacity': 1})
     console.info(this)
 
     const isCorrect = typeof $(this).attr('correct') != 'undefined'
@@ -89,21 +92,26 @@ function renderQuestion(){
     const question = questionList[currentQuestion]
     const choiceBlock = $('.choices')
     $('.question').text(question.question)
+    let abcd = ['a','b','c','d']
+    let i = 0
     
     for(let choice of question.choiceList) {
         let choiceElem = $('<div>',{
-            class: 'choice',
+            class: 'choice' + abcd[i],
             html: choice.text
         })
         
-        if(choice.choice == question.correct) {
-            choiceElem.attr('correct', 1)
-        }
+        // if(choice.choice == question.correct) {
+        //     choiceElem.attr('correct', 1)
+        // }
         
         choiceBlock.append(choiceElem)
+        $('.choice' + abcd[i]).click(choiceClick)
+        ++i
     }
-
-    $('.choice').click(choiceClick)
+    // for(let i;i<4;++i){
+    //     $('.choice' + abcd[i]).click(choiceClick)
+    // }
 }
 
 $(document).ready(function() {
