@@ -1,48 +1,48 @@
 let questionList = [
     {
-        question : "Is Chato gay?",
+        question : "จะติด มข. มั้ย",
         choiceList: [
             {
                 choice: 'a',
-                text: 'No'
+                text: 'ติด'
             },
             {
                 choice: 'b',
-                text: 'Yes'
+                text: 'ไม่ติด'
             },
             {
                 choice: 'c',
-                text: 'Mueng a gay'
+                text: 'ติดมั้ง'
             },
             {
                 choice: 'd',
-                text: 'Mai bok'
+                text: 'ไม่บอก'
             },
         ],
         correct : 'a'
     },
-    {
-        question : "Is Team gay?",
-        choiceList: [
-            {
-                choice: 'a',
-                text: 'No'
-            },
-            {
-                choice: 'b',
-                text: 'Yes'
-            },
-            {
-                choice: 'c',
-                text: 'Mueng a gay'
-            },
-            {
-                choice: 'd',
-                text: 'Mai bok'
-            },
-        ],
-        correct : 'a'
-    }
+    // {
+    //     question : "Is Team gay?",
+    //     choiceList: [
+    //         {
+    //             choice: 'a',
+    //             text: 'No'
+    //         },
+    //         {
+    //             choice: 'b',
+    //             text: 'Yes'
+    //         },
+    //         {
+    //             choice: 'c',
+    //             text: 'Mueng a gay'
+    //         },
+    //         {
+    //             choice: 'd',
+    //             text: 'Mai bok'
+    //         },
+    //     ],
+    //     correct : 'a'
+    // }
 ];
 
 var currentQuestion = 0;
