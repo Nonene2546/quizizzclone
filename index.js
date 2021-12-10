@@ -68,6 +68,7 @@ function choiceClick () {
     // $('.choice[correct]').css('background-color', 'green');
     $(this).parent().children(':not([correct])').css('opacity',0)
     $('.choice' + crt).css({'background-color': 'green', 'opacity': 1})
+    $('.choice' + crt).attr('correct',1)
     console.info(this)
 
     const isCorrect = typeof $(this).attr('correct') != 'undefined'
@@ -125,7 +126,7 @@ function changeQuestion() {
     if(currentQuestion == questionList.length){
         $('body').children().remove()
         $('body').append($('<div>',{
-            html: "Congratulation",
+            html: "The end",
             id: 'end'
         }))
         return
