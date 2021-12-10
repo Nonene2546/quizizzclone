@@ -61,6 +61,7 @@ var currentQuestion = 0;
 
 
 // document.querySelectorAll('.choice').addEventListener('click', choiceClick);
+let abcd = ['a','b','c','d']
 
 function choiceClick () {
     let crt = questionList[currentQuestion].correct
@@ -85,7 +86,9 @@ function choiceClick () {
 
     setTimeout(changeQuestion, 2000);
 
-    $('.choice').off('click', choiceClick)
+    for(let i of abcd){
+        $('.choice' + i).off('click', choiceClick)
+    }
 
 }
 
@@ -93,7 +96,6 @@ function renderQuestion(){
     const question = questionList[currentQuestion]
     const choiceBlock = $('.choices')
     $('.question').text(question.question)
-    let abcd = ['a','b','c','d']
     let i = 0
     
     for(let choice of question.choiceList) {
