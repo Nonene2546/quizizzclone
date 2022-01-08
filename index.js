@@ -1,6 +1,6 @@
 let questionList = [
     {
-        question : "จะติด มข. มั้ย",
+        question : "จะติดมหาลัยมั้ย",
         choiceList: [
             {
                 choice: 'a',
